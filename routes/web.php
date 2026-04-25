@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\ListBarangController;
 
 //Route::get('/', function () {
     // return view('welcome');
@@ -31,7 +32,8 @@ Route::prefix('admin')->group(function () {
     });
 
     // Route::get('/listbarang/{id}/{nama}', function($id, $nama){
-    // return view('list_barang', compact('id', 'nama'));
+       //  return view('list_barang', compact('id', 'nama'));
     // });
     Route::get('/listbarang/{id}/{nama}', [ListBarangController::class, 'tampilkan']);
+
 });
